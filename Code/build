@@ -1,0 +1,16 @@
+#!/bin/bash
+
+dir=$(dirname ${0})
+pd=$PWD
+cd $dir
+
+if [ -nd ./obj ]; then
+	dotnet restore
+fi
+
+dotnet build --sc
+
+mv bin/Debug/net8.0/linux-x64 b
+rm bin -rf
+mv b bin
+cd $pd

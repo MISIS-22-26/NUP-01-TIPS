@@ -1,0 +1,6 @@
+#!/bin/bash
+
+rm -rf {bin,obj}
+echo "removed bin/"
+echo "removed obj/"
+echo "next time prior to building this project do not forget to run dotnet restore"

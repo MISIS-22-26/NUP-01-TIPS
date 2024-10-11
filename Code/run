@@ -1,0 +1,6 @@
+#!/bin/bash
+
+pd=$PWD
+cd "$(dirname ${0})"
+exec bin/lab1 "$(cat input.rus)"
+cd $pd
